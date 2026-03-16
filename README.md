@@ -1,16 +1,31 @@
-# React + Vite
+# Project Email Reviewers
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This app takes a list of students who will submit a project and students who may submit one, along with email addresses, an email template with token placeholders, and a link to detailed project instructions. It randomly distributes peers to review across students and generates emails to send them.
 
-Currently, two official plugins are available:
+## Use it online
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[GitHub Pages](https://majchrzakt.github.io/Project-Email-Reviewers/)
 
-## React Compiler
+## Prerequisites
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js v18+
+- npm v9+
 
-## Expanding the ESLint configuration
+## Run it locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clone the repo, then run these commands in the root directory.
+
+```
+npm install
+npm run dev
+```
+
+## Deploy to your own GitHub Pages
+
+1. Fork the repo
+2. Update `base` in `vite.config.js` to `/your-repo-name/`
+3. Run `npm run deploy`
+
+## Tech stack
+
+- React, Vite, Tailwind

@@ -649,7 +649,9 @@ export default function App() {
         <code className="bg-gray-100 px-1 rounded">PEER7</code>,{" "}
         <code className="bg-gray-100 px-1 rounded">DATE</code>, and{" "}
         <code className="bg-gray-100 px-1 rounded">LINK</code> in your email
-        template.
+        template. 'Yes' reviewers will complete a project, while 'maybe'
+        reviewers may or may not complete a project. Don't include any students
+        who cannot pass at this point, whether or not they complete a project.
       </p>
 
       <div className="grid grid-cols-4 gap-4 mb-6">
@@ -659,7 +661,7 @@ export default function App() {
           onChange={setRsvpText}
           onFile={setRsvpText}
           placeholder={"yes\nAlice\nBob\nmaybe\nCarol\nend"}
-          hint="yes / maybe sections, one name per line, end with 'end'"
+          hint="yes/maybe/end, one name per line"
         />
         <PasteOrFile
           label="Reviewer Emails"
@@ -670,7 +672,7 @@ export default function App() {
           hint="Format: Name:email, one per line"
         />
         <PasteOrFile
-          label="Email Script"
+          label="Email Template"
           value={emailText}
           onChange={setEmailText}
           onFile={setEmailText}
@@ -685,6 +687,7 @@ export default function App() {
           onChange={setLinkText}
           onFile={(text) => setLinkText(text.trim())}
           placeholder="https://..."
+          hint="Enter 'none' if no LINK token in email template"
         />
       </div>
 
